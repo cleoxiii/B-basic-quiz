@@ -18,7 +18,7 @@ public class EducationController {
 
     @GetMapping("/users/{id}/educations")
     @ResponseStatus(HttpStatus.OK)
-    public List<Education> getEducation(@PathVariable long id) {
+    public List<Education> getEducationListById(@PathVariable long id) {
         return educationService.getEducationListById(id);
     }
 }
