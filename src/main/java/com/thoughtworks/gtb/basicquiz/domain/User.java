@@ -20,7 +20,7 @@ public class User {
 
     @NotNull
     @Min(17)
-    private long age;
+    private Long age;
 
     @NotNull
     @Length(min = 8, max = 512)

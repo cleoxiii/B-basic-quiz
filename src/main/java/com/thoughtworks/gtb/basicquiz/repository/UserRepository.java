@@ -8,10 +8,10 @@ import java.util.List;
 
 @Repository
 public class UserRepository {
-    private List<User> userList  = new ArrayList<>();
+    private final List<User> userList  = new ArrayList<>();
 
     {
-        userList.add(new User(1, "KAMIL", 24,
+        userList.add(new User(1, "KAMIL", 24L,
                 "https://inews.gtimg.com/newsapp_match/0/3581582328/0",
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, non, dolorem, cumque distinctio magni quam expedita velit laborum sunt amet facere tempora ut fuga aliquam ad asperiores voluptatem dolorum! Quasi."));
     }

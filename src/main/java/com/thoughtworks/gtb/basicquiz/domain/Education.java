@@ -14,7 +14,7 @@ public class Education {
     private long userId;
 
     @NotNull
-    private long year;
+    private Long year;
 
     @NotNull
     @Length(min = 1, max = 256)
