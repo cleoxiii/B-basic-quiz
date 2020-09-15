@@ -19,4 +19,11 @@ public class UserRepository {
     public User getUserById(long id){
         return userList.get((int) (id - 1));
     }
+
+    public int count() { return userList.size();}
+
+    public User addUser(User user) {
+        userList.add(user);
+        return getUserById(user.getId());
+    }
 }
