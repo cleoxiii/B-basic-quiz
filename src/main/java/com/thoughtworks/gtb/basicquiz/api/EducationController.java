@@ -21,4 +21,10 @@ public class EducationController {
     public List<Education> getEducationListById(@PathVariable long id) {
         return educationService.getEducationListById(id);
     }
+
+    @PostMapping("/users/{id}/educations")
+    @ResponseStatus(HttpStatus.CREATED)
+    public List<Education> addEducation(@PathVariable long id, @RequestBody Education education) {
+        return educationService.addEducation(id, education);
+    }
 }

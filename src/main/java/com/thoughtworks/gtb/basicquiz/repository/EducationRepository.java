@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Repository
 public class EducationRepository {
-    private Map<Long, List<Education>> educationMap = new HashMap<>();
+    private final Map<Long, List<Education>> educationMap = new HashMap<>();
 
     {
         List<Education> educationList = new ArrayList<>();
@@ -21,5 +21,17 @@ public class EducationRepository {
 
     public List<Education> getEducationListById(long id) {
         return educationMap.get(id);
+    }
+
+    public List<Education> addEducation(long id, Education education) {
+        education.setUserId(id);
+        if(educationMap.containsKey(id)) {
+            educationMap.get(id).add(education);
+        } else {
+            List<Education> educationList = new ArrayList<>();
+            educationList.add(education);
+            educationMap.put(id, educationList);
+        }
+        return getEducationListById(id);
     }
 }
