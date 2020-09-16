@@ -10,6 +10,7 @@ import java.util.List;
 public class UserRepository {
     private final List<User> userList  = new ArrayList<>();
 
+    // GTB: 不需要加默认数据，调试时可以用，最终提交时删掉即可
     {
         userList.add(new User(1, "KAMIL", 24L,
                 "https://inews.gtimg.com/newsapp_match/0/3581582328/0",

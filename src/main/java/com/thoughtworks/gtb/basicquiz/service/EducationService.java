@@ -18,6 +18,7 @@ public class EducationService {
         return educationRepository.getEducationListById(id);
     }
 
+    // GTB: - 没有判断 use 是否是存在的
     public List<Education> addEducation(long id, Education education) {
         return educationRepository.addEducation(id, education);
     }

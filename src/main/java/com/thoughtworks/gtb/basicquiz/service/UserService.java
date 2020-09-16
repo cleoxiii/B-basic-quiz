@@ -17,6 +17,7 @@ public class UserService {
     }
 
     public User addUser(User user) {
+        // GTB: 通常生成 id 的职责是 Repository 的，但也有例外
         user.setId(userRepository.count() + 1);
         return userRepository.addUser(user);
     }
